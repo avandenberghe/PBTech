@@ -730,8 +730,12 @@ blockquote {
 .post.reported,
 .post.warned,
 .post.deleted {
-    background-color: rgba(0,0,0,0.09);
-    background: linear-gradient(to bottom, rgb(191 189 189 / 14%) 0%, rgb(245 245 245 / 14%) 100%);
+    /*background-color: rgba(0,0,0,0.09);
+    background: linear-gradient(to bottom, rgb(191 189 189 / 14%) 0%, rgb(245 245 245 / 14%) 100%);*/
+
+    background: rgb(255,255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(245,245,245,0.5) 0%, rgba(245,245,245,1) 100%);
+
     border-bottom: #CAC9C8;
 }
 
@@ -999,9 +1003,10 @@ dl.thumbnail dt a:hover img,
 ----------------------------------------*/
 
 .topic_poll .panel {
-    box-shadow: inset 0 0 0 1px #000, 0 0 0 1px #000, 0 2px 4px rgba(0, 0, 0, 0.6);
-    border: #1B1B1B;
-    background: #313131;
+    box-shadow: inset 0 0 0 1px #a8a8a8, 0 0 0 1px #b9b9b9, 0 2px 4px rgba(110, 110, 110, 0.6);
+
+    border: #6e6e6e;
+    background: #b9b9b9;
 }
 
 .topic_poll .panel {
@@ -1020,16 +1025,13 @@ dl.thumbnail dt a:hover img,
 }
 
 .topic_poll .polls {
-    background: rgba(19,19,19,0.14);
-    background: -moz-linear-gradient(top, rgba(19,19,19,0.14) 0%, rgba(214,210,214,0.14) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(19,19,19,0.14)), color-stop(100%, rgba(214,210,214,0.14)));
-    background: -webkit-linear-gradient(top, rgba(19,19,19,0.14) 0%, rgba(214,210,214,0.14) 100%);
-    background: -o-linear-gradient(top, rgba(19,19,19,0.14) 0%, rgba(214,210,214,0.14) 100%);
-    background: -ms-linear-gradient(top, rgba(19,19,19,0.14) 0%, rgba(214,210,214,0.14) 100%);
-    background: linear-gradient(to bottom, rgba(19,19,19,0.14) 0%, rgba(214,210,214,0.14) 100%);
+    background: rgba(168, 168, 168, 0.14);
+    background: -moz-linear-gradient(top, rgba(168, 168, 168, 0.14) 0%, rgba(214,210,214,0.14) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(168, 168, 168, 0.14)), color-stop(100%, rgba(214,210,214,0.14)));
+    background: -webkit-linear-gradient(top, rgba(168, 168, 168, 0.14) 0%, rgba(214,210,214,0.14) 100%);
+    background: linear-gradient(to bottom, rgba(168, 168, 168, 0.14) 0%, rgba(214,210,214,0.14) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#d6d2d6', GradientType=0 );
 }
-
 .topic_poll h2 {
     color: #074E79;
 }
@@ -1039,20 +1041,12 @@ dl.thumbnail dt a:hover img,
 }
 
 .topic_poll p.author {
-    box-shadow: 0 0 0 1px #000, 0 0 4px 2px rgba(0, 0, 0, 0.9), inset 0 0 6px 6px rgba(0, 0, 0, 1);
-    background: #0A0A0A;
-    background: rgba(0, 0, 0, 0.7);
+    background: #a8a8a8;
     border: #363636;
 }
 
 .topic_poll p.author strong {
     color: #000;
-}
-
-.topic_poll .polls {
-    box-shadow: 0 0 0 1px #000, 0 0 4px 2px rgba(0, 0, 0, 0.9), inset 0 0 0 1px #111, inset 0 0 6px 6px rgba(0, 0, 0, 1);
-    background: #0A0A0A;
-    background: rgba(0, 0, 0, 0.6);
 }
 
 fieldset.polls dl {
@@ -1062,7 +1056,6 @@ fieldset.polls dl {
 fieldset.polls dd {
     text-shadow: #000;
 }
-
 
 fieldset.polls dd.resultbar div {
     box-shadow: rgba(0, 0, 0, 0.2);

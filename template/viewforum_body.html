@@ -250,7 +250,7 @@
 	{% if S_IS_POSTABLE %}
 	<div class="panel">
 		<div class="inner">
-		<strong>{{ lang(S_SORT_DAYS ? 'NO_TOPICS_TIME_FRAME' : 'NO_TOPICS') }}</strong>
+			<strong>{{ lang('NO_TOPICS') }}</strong>
 		</div>
 	</div>
 	{% elseif not S_HAS_SUBFORUM %}
@@ -307,7 +307,7 @@
 	</div>
 {% endif %}
 
-{% if S_DISPLAY_POST_INFO %}
+{% if S_IS_POSTABLE and rules|length %}
 	<div class="stat-block permissions">
 		<h3>{{ lang('FORUM_PERMISSIONS') }}</h3>
 		<p>{% for rules in loops.rules %}{{ rules.RULE }}<br />{% endfor %}</p>

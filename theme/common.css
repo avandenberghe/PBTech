@@ -23,6 +23,11 @@ h2 {
     margin-top: 0.5em;
 }
 
+.topic-title {
+    font-weight: bold;
+}
+
+
 h3 a:hover { text-decoration: none; }
 
 i, em {
