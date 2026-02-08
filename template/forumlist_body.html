@@ -30,7 +30,7 @@
 		<li class="row">
 			{% EVENT forumlist_body_forum_row_prepend %}
 			<dl{% if forumrow.S_UNREAD_FORUM %} class="unread"{% endif %}>
-				<dt title="{{ forumrow.FORUM_FOLDER_IMG_ALT }}">
+				<dt title="{% if forumrow.S_IS_LINK %}{{ lang('FORUM_LINK') }}{% else %}{{ forumrow.FORUM_FOLDER_IMG_ALT }}{% endif %}">
 					{% if forumrow.FORUM_IMAGE %}
 					{% EVENT forumlist_body_forum_image_before %}
 					<span class="forum-image">{% EVENT forumlist_body_forum_image_prepend %} {{ forumrow.FORUM_IMAGE }}{% EVENT forumlist_body_forum_image_append %}</span>
@@ -47,7 +47,7 @@
 							{% for subforum in forumrow.subforum %}
 							    {% EVENT forumlist_body_subforum_link_prepend %}
 							    <a href="{{ subforum.U_SUBFORUM }}"
-							        class="subforum{% if subforum.S_UNREAD %} unread{% else %} read{% endif %}" title="{% if subforum.S_UNREAD %}{{ lang('UNREAD_POSTS') }}{% else %}{{ lang('NO_UNREAD_POSTS') }}{% endif %}">
+							        class="subforum{% if subforum.S_UNREAD %} unread{% else %} read{% endif %}" title="{% if subforum.IS_LINK %}{{ lang('FORUM_LINK') }}{% elseif subforum.S_UNREAD %}{{ lang('UNREAD_POSTS') }}{% else %}{{ lang('NO_UNREAD_POSTS') }}{% endif %}">
 							    <i class="icon {% if subforum.IS_LINK %}fa-external-link{% else %}fa-file-o{% endif %} fa-fw {% if subforum.S_UNREAD %} icon-red{% else %} icon-blue{% endif %} icon-md" aria-hidden="true"></i>
 							            <span>{{ subforum.SUBFORUM_NAME }}</span></a>
 							    {% EVENT forumlist_body_subforum_link_append %}

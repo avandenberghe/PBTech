@@ -7,7 +7,7 @@ This style was inspired by the Battlenet forums 2015. example
 http://web.archive.org/web/20141207163104/http://us.battle.net/en/forum/topic/10423582376
 
 #### Requirements
-- phpBB 3.3.x
+- phpBB 3.3.15 or higher
 - prosilver
 
 #### Customizing
@@ -18,10 +18,18 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
-3.0.15 RC2 **under development**
+3.0.16 (08-02-2026)
+- updated for phpBB 3.3.15
+- updated post display links to use AJAX anchors (viewtopic)
+- added viewtopic_body_postrow_content_before event
+- added viewtopic_body_online_list_after event
+- added forum link type detection in forumlist tooltips
+- updated autocomplete attributes on login forms
+- simplified search results sort condition
+- merged overall_header.html from prosilver 3.3.15
 
-3.0.15 RC1 10-01-2021  
-- updated for phpbb 3.3
+3.0.15 (10/01/2020)
+- updated for phpbb 3.3.2
 
 3.0.14 (03/01/2020)
 - updated for phpbb 3.2.10
