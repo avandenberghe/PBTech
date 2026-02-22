@@ -147,25 +147,13 @@ li.row.bg3,
 }
 
 .topic_poll h2 span.poll-icon-timer {
-    background: url("./images/icons/poll-end.gif") no-repeat 0 50%;
-}
-
-.topic_poll h2 span.poll-icon-timer {
     background: url("./images/icons/poll-open.png") no-repeat 0 50%;
     padding-left: 40px;
 }
 
 .topic_poll h2 span.poll-icon-open {
-    background: url("./images/icons/poll-open.gif") no-repeat 0 50%;
-}
-
-.topic_poll h2 span.poll-icon-open {
     background: url("./images/icons/poll-open.png") no-repeat 0 50%;
     padding-left: 40px;
-}
-
-.topic_poll h2 span.poll-icon-closed {
-    background: url("./images/icons/poll-private.gif") no-repeat 0 50%;
 }
 
 .topic_poll h2 span.poll-icon-closed {

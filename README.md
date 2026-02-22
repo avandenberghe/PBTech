@@ -18,6 +18,16 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
+3.0.17 (22-02-2026)
+- fixed hardcoded assets_version in prosilver stylesheet link
+- removed unnecessary prosilver en/stylesheet.css
+- removed tweaks.css IE conditional
+- use T_FONT_AWESOME_LINK instead of hardcoded CDN URL
+- updated webfont URL in simple_header.html
+- removed dead CSS rules referencing missing images (poll icons, imageset)
+- replaced missing border images with CSS borders in responsive view
+- simplified quick-login panel styling (removed missing image references)
+
 3.0.16 (08-02-2026)
 - updated for phpBB 3.3.15
 - updated post display links to use AJAX anchors (viewtopic)

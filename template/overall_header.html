@@ -25,7 +25,7 @@
 <!--
 	phpBB style name: PBTech
 	Based on style:   prosilver (this is the default phpBB3 style)
-	Created by: PayBas (http://www.pbwow.com)
+	Created by: PayBas
 	Maintained by: Sajaki (https://www.avathar.be)
 -->
 
@@ -45,9 +45,8 @@
 	})(document);
 </script>
 {% endif %}
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/stylesheet.css?assets_version=1" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/en/stylesheet.css?assets_version=1" rel="stylesheet">
+<link href="{{ T_FONT_AWESOME_LINK }}" rel="stylesheet">
+<link href="{{ ROOT_PATH }}styles/prosilver/theme/stylesheet.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 
 <link href="{{ T_STYLESHEET_LINK }}" rel="stylesheet">
 
@@ -63,10 +62,6 @@
 {% if S_COOKIE_NOTICE %}
 	<link href="{{ T_ASSETS_PATH }}/cookieconsent/cookieconsent.min.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
-
-<!--[if lte IE 9]>
-<link href="{{ T_THEME_PATH }}/tweaks.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-<![endif]-->
 
 {% EVENT overall_header_head_append %}
 
