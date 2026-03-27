@@ -107,14 +107,9 @@ li.row.bg3,
 ----------------------------------------*/
 
 .topic_poll .panel {
-    margin: 0 1px 4px;
-    border: 2px solid;
-    border-radius: 0;
-    padding: 3px;
-}
-
-.topic_poll .panel {
     border-width: 0 0 1px 0;
+    border-style: solid;
+    border-radius: 0;
     margin: 0;
     padding: 0;
 }
@@ -122,14 +117,12 @@ li.row.bg3,
 .topic_poll .content {
     padding: 0 20px;
     position: relative;
-    border: 1px solid;
+    border: 1px solid #CAC9C8;
 }
 
 .topic_poll .polls {
     background-repeat: no-repeat;
-    border: none;
-    border-radius: 0px;
-    box-shadow: none;
+    border-radius: 0;
     margin: 10px 10px 25px 10px;
 }
 
@@ -168,39 +161,23 @@ li.row.bg3,
     right: 20px;
     margin: 0;
     padding: 8px 14px;
-    border-radius: 0 0 6px 6px;
-    border: 1px solid;
-    border-top: none;
-    line-height: 1.5em;
-}
-
-.topic_poll p.author {
-    background: none;
     border: none;
-    box-shadow: none;
     border-radius: 0;
+    line-height: 1.5em;
 }
 
 
 .topic_poll .polls {
     position: relative;
     border-radius: 6px;
-    border: 1px solid #363636;
+    border: 1px solid #CAC9C8;
     margin: 10px 10px 36px;
     padding: 15px;
 }
 
-/*.topic_poll .polls .inner {
-	margin: 1px 2px;
-	border: 1px solid #1a1a1a;
-}*/
-
 fieldset.polls dl {
     border: none;
     line-height: 16px;
-}
-
-fieldset.polls dl {
     color: inherit;
 }
 
@@ -214,20 +191,12 @@ fieldset.polls dt {
 }
 
 fieldset.polls dd {
-    text-shadow: 0 0 2px;
-}
-
-fieldset.polls dd {
     text-shadow: none;
 }
 
 fieldset.polls dd.resultbar div {
     border: none;
     position: relative;
-}
-
-fieldset.polls dd.resultbar div {
-    box-shadow: 0 0 5px;
 }
 
 fieldset.polls dd.resultbar div:before {
@@ -238,18 +207,11 @@ fieldset.polls dd.resultbar div:before {
     top: 0;
     width: 3px;
     height: 100%;
-}
-
-fieldset.polls dd.resultbar div:before {
     background-image: none;
 }
 
 fieldset.polls dl.most-votes dd.resultbar div {
     background-position: 100% -1px;
-}
-
-fieldset.polls dl.most-votes dd.resultbar div {
-    box-shadow: 0 0 5px;
 }
 
 fieldset.polls dl.most-votes dd.resultbar div:before {
@@ -267,20 +229,12 @@ fieldset.polls dl.voted {
 }
 
 .topic_poll .poll-footer {
-    height: 74px;
-    margin: 10px 0 -51px;
-    padding: 13px 0 13px 2px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-    overflow: hidden;
-}
-
-.topic_poll .poll-footer {
     background: none;
     margin: 15px 0 0;
     padding: 0;
-    overflow: inherit;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: visible;
     height: auto;
 }
 
@@ -305,14 +259,6 @@ fieldset.polls dl.voted {
     width: auto !important;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
-}
-
-.vote-submitted {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -100px;
-    width: 200px;
 }
 
 .vote-submitted {
@@ -353,31 +299,19 @@ fieldset.polls dl.voted {
 }
 
 .no-avatar .avatar-container {
-    background: url("./images/no_avatar.gif") 50% 2px no-repeat;
-}
-
-.no-avatar .avatar-container {
     background: url("./images/no_avatar.gif") 50% 10px no-repeat;
 }
 
 .postprofile .avatar {
     display: inline-block;
     float: none;
-    margin: 2px auto 0;
-    padding: 8px 10px 11px 8px;
-    position: relative;
-    width: 64px;
-    height: 64px;
-    overflow: hidden;
-}
-
-.postprofile .avatar {
-    background: url("./images/avatar-tr.png") 100% 0 no-repeat, url("./images/avatar-bl.png") 0 100% no-repeat;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 5px;
+    position: relative;
     width: auto;
     height: auto;
     overflow: visible;
+    background: url("./images/avatar-tr.png") 100% 0 no-repeat, url("./images/avatar-bl.png") 0 100% no-repeat;
 }
 
 .online .postprofile dt strong:before,
@@ -388,7 +322,7 @@ fieldset.polls dl.voted {
     font-size: 1em;
     font-weight: normal;
     margin-right: 4px;
-    text-shadow: 0 0 3px
+    text-shadow: 0 0 3px #0cf;
 }
 
 .online .postprofile dt strong:after,
@@ -475,11 +409,6 @@ fieldset.polls dl.voted {
 .postprofile .rank-icon img {
     margin-top: 1px;
     vertical-align: middle;
-}
-
-.postprofile .avatar img {
-    width: 64px;
-    height: 64px;
 }
 
 .postprofile .avatar:after {

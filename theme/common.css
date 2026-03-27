@@ -343,8 +343,7 @@ table.table1,
 .forabg {
     border-radius: 0;
     background-image: none;
-    background-repeat-x: repeat;
-    background-repeat-y: no-repeat;
+    background-repeat: repeat-x;
 }
 
 .forum-blocks {
@@ -888,14 +887,10 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 .forums .dropdown-trigger {
     display: block;
     float: left;
-    background: url("./images/icons/child-arrow-big.gif") no-repeat scroll 50% 100% transparent;
+    background: url("./images/icons/child-arrow-big.png") no-repeat scroll 50% 100% transparent;
     height: 24px;
     width: 36px;
     cursor: pointer;
-}
-
-.forums .dropdown-trigger {
-    background-image: url("./images/icons/child-arrow-big.png");
 }
 
 .forums .dropdown-trigger:hover {

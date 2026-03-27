@@ -73,6 +73,9 @@
 						{% if forumrow.LAST_POST_TIME %}(<dfn>{{ lang('TOPICS') }}{{ lang('COLON') }}</dfn> {{ forumrow.TOPICS }} | <dfn>{{ lang('POSTS') }}{{ lang('COLON') }}</dfn>{{ forumrow.POSTS }})
 						{% if not S_IS_BOT %}<a href="{{ forumrow.U_LAST_POST }}" title="{% if forumrow.S_UNREAD_FORUM %}{{ lang('UNREAD_POSTS') }}{% else %}{{ lang('NO_UNREAD_POSTS') }}{% endif %}">{{ LAST_POST_IMG }}</a>{% endif %}{% else %}{{ lang('NO_POSTS') }}{% endif %}
 						{% EVENT forumlist_body_last_post_title_prepend %}
+						{% if forumrow.LAST_POST_TIME %}
+							{{ lang('POST_BY_AUTHOR') }} {% EVENT forumlist_body_last_poster_username_prepend %}{{ forumrow.LAST_POSTER_FULL }}{% EVENT forumlist_body_last_poster_username_append %}
+						{% endif %}
 					</span></dd>
 
 					<dd class="mcp-status"><span>

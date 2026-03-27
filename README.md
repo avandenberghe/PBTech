@@ -18,6 +18,22 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
+3.0.18 (27-03-2026)
+- added missing template events for phpBB 3.3.15 compliance (forumlist_body, search_results)
+- added last poster username display to forum list
+- removed custom quickstyle_event; use default overall_header_breadcrumbs_after location
+- fixed poll block dark background and thick black border
+- fixed UCP message colour legend thick border
+- fixed incomplete text-shadow in online user guillemets (content.css)
+- fixed duplicate closing tag in navbar_footer.html
+- fixed broken child-arrow-big.gif reference (now .png)
+- removed dead CSS: video-background, mChat, pf_pbbnetavatar, action-bar.compact
+- consolidated duplicate CSS rules (vote-submitted, postprofile avatar, poll styles)
+- replaced deprecated jQuery .bind() with .on()
+- fixed schema.org URL to use HTTPS
+- fixed non-standard background-repeat-x/y
+- added cache-bust parameter to imageset.css import
+
 3.0.17 (22-02-2026)
 - fixed hardcoded assets_version in prosilver stylesheet link
 - removed unnecessary prosilver en/stylesheet.css

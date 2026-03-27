@@ -15,7 +15,7 @@
 @import url("forms.css?v=3.3");
 /*no icons override*/
 @import url("colours.css?v=3.3");
-@import url("imageset.css");
+@import url("imageset.css?v=3.3");
 /*no custom override*/
 /*no responsive override */
 @import url("extensions.css?v=3.3");
@@ -27,10 +27,6 @@
 
 body.pbtech {
 	background-attachment: scroll;
-}
-
-body.pbtech #video-background {
-	display: none;
 }
 
 @media only screen and (max-width: 999px), only screen and (max-device-width: 999px) {
@@ -46,59 +42,8 @@ body.pbtech #video-background {
 
 /* Miscellaneous styles
 --------------------------------------------- */
-#video-background {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-}
-
-#video-background {
-	display: none;
-}
-
-#video-container {
-	position: absolute;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	top: 0;
-	z-index: -1000;
-}
-
-#video-container video {
-	opacity: 0;
-}
-
-#video-border {
-	position: absolute;
-	width: 100%;
-	z-index: -999;
-}
-
 body.fixedbg {
 	background-attachment: fixed;
-}
-
-body.fixedbg #video-background {
-	position: fixed;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translateZ(0);
-	z-index: -1; /* Conflicts with page-body box-shadow, when enabled f*cks up chrome fixed pos */
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-	body.fixedbg #video-background { z-index: auto; }
-}
-
-body.topbar #video-background {
-	top: 41px;
-}
-
-#darken {
-	background-color: #000;
-	opacity: 0.75;
 }
 
 #darken {
@@ -136,17 +81,6 @@ ul.linklist > li a:hover {
 	text-decoration: none;
 }
 
-.action-bar.compact {
-	display: none;
-}
-
-input#pf_pbbnetavatar, label[for=pf_pbbnetavatar] {
-	display: none;
-}
-
-.topic_poll + hr {
-	display: none;
-}
 
 dl.global_read,
 dl.global_read_mine,

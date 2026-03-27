@@ -54,6 +54,7 @@
 					<dd class="posts">{{ lang('REPLIES') }}</dd>
 					<dd class="views">{{ lang('VIEWS') }}</dd>
 					<dd class="lastpost"><span>{{ lang('LAST_POST') }}</span></dd>
+					{% EVENT search_results_topic_header_lastpost_after %}
 				</dl>
 			</li>
 		</ul>
@@ -89,7 +90,9 @@
 							</div>
 							{% endif %}
 							{% if searchresults.S_HAS_POLL %}{{ POLL_IMG }} {% endif %}
-							{{ lang('POST_BY_AUTHOR') }} {{ searchresults.TOPIC_AUTHOR_FULL }} &raquo; {{ searchresults.FIRST_POST_TIME }} &raquo; {{ lang('IN') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a>
+							{% EVENT topiclist_row_topic_by_author_before %}
+							{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_topic_author_username_prepend %}{{ searchresults.TOPIC_AUTHOR_FULL }}{% EVENT search_results_topic_author_username_append %} &raquo; {{ searchresults.FIRST_POST_TIME }} &raquo; {{ lang('IN') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a>
+							{% EVENT topiclist_row_topic_by_author_after %}
 							{% EVENT topiclist_row_append %}
 
 						</div>
@@ -97,9 +100,10 @@
 					<dd class="posts">{{ searchresults.TOPIC_REPLIES }}</dd>
 					<dd class="views">{{ searchresults.TOPIC_VIEWS }}</dd>
 					<dd class="lastpost"><span>
-						{{ lang('POST_BY_AUTHOR') }} {{ searchresults.LAST_POST_AUTHOR_FULL }}
+						{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_last_post_author_username_prepend %}{{ searchresults.LAST_POST_AUTHOR_FULL }}{% EVENT search_results_last_post_author_username_append %}
 						{% if not S_IS_BOT %}<a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">{{ LAST_POST_IMG }}</a> {% endif %}<br />{{ searchresults.LAST_POST_TIME }}<br /> </span>
 					</dd>
+					{% EVENT search_results_topic_row_lastpost_after %}
 				</dl>
 			</li>
 			{% EVENT search_results_topic_after %}
@@ -130,7 +134,7 @@
 	{% else %}
 		<dl class="postprofile">
 			{% EVENT search_results_postprofile_before %}
-			<dt class="author">{{ lang('POST_BY_AUTHOR') }} {{ searchresults.POST_AUTHOR_FULL }}</dt>
+			<dt class="author">{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_post_author_username_prepend %}{{ searchresults.POST_AUTHOR_FULL }}{% EVENT search_results_post_author_username_append %}</dt>
 			<dd class="search-result-date">{{ searchresults.POST_DATE }}</dd>
 			<dd>{{ lang('FORUM') }}{{ lang('COLON') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a></dd>
 			<dd>{{ lang('TOPIC') }}{{ lang('COLON') }} <a href="{{ searchresults.U_VIEW_TOPIC }}">{{ searchresults.TOPIC_TITLE }}</a></dd>
@@ -141,8 +145,10 @@
 		</dl>
 
 		<div class="postbody">
+			{% EVENT search_results_post_subject_before %}
 			<h3><a href="{{ searchresults.U_VIEW_POST }}">{{ searchresults.POST_SUBJECT }}</a></h3>
 			<div class="content">{{ searchresults.MESSAGE }}</div>
+			{% EVENT search_results_content_after %}
 		</div>
 	{% endif %}
 
@@ -181,6 +187,7 @@
 	</div>
 </div>
 
+{% EVENT search_results_jumpbox_before %}
 {% INCLUDE 'jumpbox.html' %}
 
 {% INCLUDE 'overall_footer.html' %}

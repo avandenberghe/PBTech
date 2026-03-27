@@ -2,12 +2,12 @@
 	<div class="inner">
 
 	<ul id="nav-main" class="nav-main linklist" role="menubar">
-		<li class="small-icon icon-home breadcrumbs {% if S_IS_LOCKED %} locked{% endif %}" itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li class="small-icon icon-home breadcrumbs {% if S_IS_LOCKED %} locked{% endif %}" itemscope itemtype="https://schema.org/BreadcrumbList">
 			{% if U_SITE_HOME %}
 			<span class="crumb" {{ MICRODATA }}>
 				<a href="{{ U_SITE_HOME }}" itemtype="https://schema.org/Thing" itemscope itemprop="item" data-navbar-reference="home">
 				
-				<span itemprop="name">{{ lang('SITE_HOME') }}</span></a>
+				<span itemprop="name">{{ lang('SITE_HOME') }}</span>
 				</a>
 				<meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" />				
 				</span>				

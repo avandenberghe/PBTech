@@ -92,12 +92,10 @@
 /* Preferences pane layout
 ----------------------------------------*/
 
-.cp-mini
-{
-    box-shadow: none;
-    border: 1px solid;
+.cp-mini {
+    border: 1px solid #CAC9C8;
     border-radius: 0;
-    box-shadow: 0 0 4px 2px ;
+    box-shadow: none;
 }
 
 /* PM Styles
