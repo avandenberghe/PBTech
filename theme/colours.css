@@ -528,7 +528,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 .forum-blocks dl.unread {
-    background: #F2F1F0;
+    background: #CFD4D8;
 }
 
 .forum-blocks dl:hover .list-inner {
@@ -537,7 +537,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 /* Other blocks */
 .misc-block, .stat-block p {
-    background: #E5E4E3;
+    background: #DCDBD9;
 }
 
 /* Hover states */

@@ -58,7 +58,7 @@
 }
 
 .top-bar .linklist > li.link > a {
-	color: rgba(255, 255, 255, 0.7);
+	color: #00C0FF;
 	padding: 0 15px !important;
 	display: block;
 	cursor: pointer;

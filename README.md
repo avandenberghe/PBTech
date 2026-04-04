@@ -20,16 +20,20 @@ For more information and support, we suggest you visit
 ### Changes
 3.0.19 (04-04-2026)
 - added missing theme/print.css for print view
+- added styled CSS tooltips for breadcrumb links (replaces native browser tooltips)
 - fixed post background: invalid multi-gradient CSS caused fallback to wrong colour; replaced with light grey gradients
 - fixed low contrast: postprofile username (#DDD on light bg) changed to #0072a3
 - fixed low contrast: blockquote text (#CCCCCC on light bg) changed to #555
 - fixed search results: topic status icons tiling across full row width (missing background-repeat)
-- fixed search results: changed dl.icon to dl.row-item for proper column alignment
+- fixed search results: changed dl.icon to dl.row-item for proper column alignment and font rendering
 - fixed post content text-align: changed justify to left
 - fixed postprofile text-align: changed center to left, added left padding
 - fixed duplicate quote sigils: removed decorative blockquote:before/:after (prosilver cite:before suffices)
+- fixed duplicate arrow icons: suppressed CSS :before/:after arrows (prosilver template provides icons)
 - fixed notification popup header/footer colour mismatch (#4d606d to #555)
 - fixed button font-size: override prosilver 13px to 12px
+- fixed forum titles and recent topics titles: dark blue (#074E79) to black
+- aligned forum blocks and recent topics row backgrounds (#DCDBD9 base, #E6E6E6 hover)
 - CSS lint cleanup: merged duplicate selectors and removed dead code across all theme files (87 to 49 issues)
 
 3.0.18 (27-03-2026)
