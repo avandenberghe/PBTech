@@ -163,7 +163,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0
 }
 
 #recent-topics a.topictitle {
-    color: #074e79;
+    color: #000;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -176,10 +176,22 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0
 }
 
 #recent-topics li.row {
+	background: #DCDBD9;
 	border-top: none;
 	border-bottom-color: #C5C5C5 !important;
 	transition: 0.15s ease-in-out 0s !important;
-	
+}
+
+#recent-topics li.row:hover {
+	background: #E6E6E6;
+}
+
+#recent-topics li.row.sticky {
+	background: #DEE4E8;
+}
+
+#recent-topics li.row.sticky:hover {
+	background: #D4DCE2;
 }
 
 #recent-topics li.row dl {

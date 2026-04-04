@@ -513,7 +513,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 /* pbWow Forums list contents */
 
 .forum-blocks dl {
-    background: #E5E4E3;
+    background: #DCDBD9;
 }
 
 .forum-blocks dl .list-inner {
@@ -542,7 +542,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 /* Hover states */
 .forum-blocks dl:hover {
-    background: #FFFFFF;
+    background: #E6E6E6;
     border: none #00C0FF;
 }
 
@@ -576,7 +576,7 @@ a.topictitle			{ color: #3a3a3a; }
 a.topictitle:hover		{ color: #4282bc; }
 a.topictitle:active		{ color: #4282bc; }
 
-a.forumtitle,			.forumbg .header a,			.forabg .header a, 			th a 		{ color: #074E79; }
+a.forumtitle,			.forumbg .header a,			.forabg .header a, 			th a 		{ color: #000; }
 a.forumtitle:hover,		.forumbg .header a:hover,	.forabg .header a:hover, 	th a:hover 	{ color: #0295EE; }
 a.forumtitle:active,	.forumbg .header a:active,	.forabg .header a:active, 	th a:active { color: #0295EE; }
 
