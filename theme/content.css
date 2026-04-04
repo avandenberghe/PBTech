@@ -76,7 +76,7 @@ li.row.bg3,
 .post .postbody .content,
 #cp-main .post .content,
 #cp-main .pm .content {
-    text-align: justify;
+    text-align: left;
     border-top: solid 1px;
     padding: 10px;
 }
@@ -122,8 +122,11 @@ li.row.bg3,
 
 .topic_poll .polls {
     background-repeat: no-repeat;
-    border-radius: 0;
-    margin: 10px 10px 25px 10px;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid #CAC9C8;
+    margin: 10px 10px 36px;
+    padding: 15px;
 }
 
 .topic_poll h2 {
@@ -166,14 +169,6 @@ li.row.bg3,
     line-height: 1.5em;
 }
 
-
-.topic_poll .polls {
-    position: relative;
-    border-radius: 6px;
-    border: 1px solid #CAC9C8;
-    margin: 10px 10px 36px;
-    padding: 15px;
-}
 
 fieldset.polls dl {
     border: none;
@@ -241,24 +236,15 @@ fieldset.polls dl.voted {
 .topic_poll .poll-footer .button1 {
     display: inline-block;
     vertical-align: top;
-    width: 120px !important;
-    height: 25px;
-    line-height: 25px;
-    margin: 0 1px;
-    padding: 0;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.topic_poll .poll-footer .button1 {
+    width: auto !important;
     height: auto;
     line-height: 1.7em;
+    margin: 0 1px;
     padding: 2px 6px;
-    width: auto !important;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .vote-submitted {
@@ -276,14 +262,13 @@ fieldset.polls dl.voted {
     background: none !important;
     position: relative;
     margin: 0;
-    padding: 0;
-    min-height: 165px;
+    padding: 0 0 0 10px;
     border: none;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 22%;
     float: left;
-    text-align: center;
+    text-align: left;
     text-shadow: 1px 1px 0;
     min-height: inherit;
 }
@@ -349,7 +334,7 @@ fieldset.polls dl.voted {
 /* Gaming assets (pbWow extension)
 --------------------------------------------- */
 .postprofile .icons-frame {
-    display: block;
+    display: none;
     height: 83px;
     width: 35px;
     position: absolute;
@@ -393,11 +378,12 @@ fieldset.polls dl.voted {
     line-height: 30px;
     text-align: center;
     position: absolute;
-    bottom: 7px;
+    bottom: 0;
     left: 50%;
-    -webkit-transform: translateX(9px);
-    -ms-transform: translateX(9px);
-    transform: translateX(9px);
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+    text-shadow: 0 0 2px;
 }
 
 .postprofile .rank-icon span {
@@ -423,17 +409,6 @@ fieldset.polls dl.voted {
     max-width: 200px;
 }
 
-.postprofile .icons-frame {
-    display: none;
-}
-
-.postprofile .rank-icon {
-    bottom: 0;
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
-    text-shadow: 0 0 2px;
-}
 /** end gaming assets **/
 
 

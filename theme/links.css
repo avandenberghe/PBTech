@@ -28,13 +28,13 @@ a.arrow-up:before, a.arrow-down:after, a.arrow-left:before, a.arrow-right:after 
     -moz-osx-font-smoothing: grayscale;
 }
 
-a.up:before, a.arrow-up:before		{ content: "\f077"; }
-a.down:after, a.arrow-down:after	{ content: "\f078"; padding-right: 0; padding-left: 3px; }
-a.left:before, a.arrow-left:before	{ content: "\f053"; }
-a.right:after, a.arrow-right:after	{ content: "\f054"; padding-right: 0; padding-left: 3px; }
+a.up:before, a.arrow-up:before		{ content: none; }
+a.down:after, a.arrow-down:after	{ content: none; }
+a.left:before, a.arrow-left:before	{ content: none; }
+a.right:after, a.arrow-right:after	{ content: none; }
 
-a.top:before { content: "\f077"; }
-a.top2:before { content: "\f077"; }
+a.top:before { content: none; }
+a.top2:before { content: none; }
 a.top2 {
     font-size: 10px;
     padding-left: 0;

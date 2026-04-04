@@ -1,0 +1,3 @@
+*.png
+!contrib/screenshot.png
+!theme/images/**/*.png

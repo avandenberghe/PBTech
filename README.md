@@ -18,6 +18,20 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
+3.0.19 (04-04-2026)
+- added missing theme/print.css for print view
+- fixed post background: invalid multi-gradient CSS caused fallback to wrong colour; replaced with light grey gradients
+- fixed low contrast: postprofile username (#DDD on light bg) changed to #0072a3
+- fixed low contrast: blockquote text (#CCCCCC on light bg) changed to #555
+- fixed search results: topic status icons tiling across full row width (missing background-repeat)
+- fixed search results: changed dl.icon to dl.row-item for proper column alignment
+- fixed post content text-align: changed justify to left
+- fixed postprofile text-align: changed center to left, added left padding
+- fixed duplicate quote sigils: removed decorative blockquote:before/:after (prosilver cite:before suffices)
+- fixed notification popup header/footer colour mismatch (#4d606d to #555)
+- fixed button font-size: override prosilver 13px to 12px
+- CSS lint cleanup: merged duplicate selectors and removed dead code across all theme files (87 to 49 issues)
+
 3.0.18 (27-03-2026)
 - added missing template events for phpBB 3.3.15 compliance (forumlist_body, search_results)
 - added last poster username display to forum list

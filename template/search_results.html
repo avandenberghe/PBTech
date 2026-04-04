@@ -49,7 +49,7 @@
 		<div class="inner">
 		<ul class="topiclist">
 			<li class="header">
-				<dl class="icon">
+				<dl class="row-item">
 					<dt><div class="list-inner">{{ lang('TOPICS') }}</div></dt>
 					<dd class="posts">{{ lang('REPLIES') }}</dd>
 					<dd class="views">{{ lang('VIEWS') }}</dd>
@@ -63,9 +63,9 @@
 		{% for searchresults in loops.searchresults %}
 			{% EVENT search_results_topic_before %}
 			<li class="row{% if searchresults.S_ROW_COUNT is even %} bg1{% else %} bg2{% endif %}">
-				<dl class="icon {{ searchresults.TOPIC_IMG_STYLE }}">
+				<dl class="row-item {{ searchresults.TOPIC_IMG_STYLE }}">
 					<dt {% if searchresults.TOPIC_ICON_IMG %}style="background-image: url({{ T_ICONS_PATH }}{{ searchresults.TOPIC_ICON_IMG }}); background-repeat: no-repeat;"{% endif %} title="{{ searchresults.TOPIC_FOLDER_IMG_ALT }}">
-						{% if searchresults.S_UNREAD_TOPIC and not S_IS_BOT %}<a href="{{ searchresults.U_NEWEST_POST }}" class="icon-link"></a>{% endif %}
+						{% if searchresults.S_UNREAD_TOPIC and not S_IS_BOT %}<a href="{{ searchresults.U_NEWEST_POST }}" class="row-item-link"></a>{% endif %}
 						<div class="list-inner">
 
 							{% EVENT topiclist_row_prepend %}

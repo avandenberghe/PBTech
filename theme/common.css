@@ -43,7 +43,6 @@ i, em {
 
 
 .page-body {
-    margin: 0;
     position: relative;
     background: none;
     border: none;
@@ -96,7 +95,6 @@ i, em {
 .headerbar {
     max-width: 990px;
     margin: 0 auto;
-    padding: 0 10px;
     background: none;
     border: none;
     border-radius: 0;
@@ -163,7 +161,6 @@ i, em {
 }
 
 #body-header {
-    background-size: auto 100%;
     min-height: 35px;
     position: relative;
     background-size: auto;
@@ -172,7 +169,7 @@ i, em {
 
 #body-header:before, #body-header:after {
     content: '';
-    display: block;
+    display: none;
     position: absolute;
     top: -21px;
     width: 22px;
@@ -186,11 +183,6 @@ i, em {
 
 #body-header:after {
     right: 0;
-}
-
-#body-header:before,
-#body-header:after {
-    display: none;
 }
 
 #body-header ul.linklist {
@@ -545,6 +537,7 @@ li.header dl.icon dt {
 
 dl.icon {
     background-position: 8px 50%;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -860,7 +853,7 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 
 .dropdown-extended a.mark_read:before {
     font-family: FontAwesome;
-    text-shadow: 0 0 5px;
+    text-shadow: none;
     font-style: normal;
     font-weight: normal;
     font-size: 1.4em;
@@ -868,10 +861,6 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.dropdown-extended a.mark_read:before {
-    text-shadow: none;
 }
 
 .notification_list p.notification-time, .notification_list p.notifications_time {
@@ -1007,3 +996,33 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 .profile-context a.icon-profile { background-position: 0 0; }
 .profile-context a.icon-search { background-position: 0 -30px; }
 .profile-context a.icon-ignore { background-position: 0 -60px; }
+
+/* Custom tooltips (replaces native title tooltips)
+--------------------------------------------- */
+[data-title] {
+    position: relative;
+}
+
+[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    margin-bottom: 6px;
+    background: #333;
+    color: #eee;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 4px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 100;
+    pointer-events: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+[data-title]:hover::before {
+    content: none;
+}

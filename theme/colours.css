@@ -400,22 +400,22 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 }
 
 .dropdown-extended .pointer {
-    border-color: #8ba4b4 transparent;
+    border-color: #555 transparent;
 }
 
 .dropdown-extended .pointer-inner {
-    border-color: #4d606d transparent;
+    border-color: #555 transparent;
 }
 
 .dropdown-extended .dropdown-contents {
-    background: #4d606d;
-    border-color: #4d606d;
+    background: #555;
+    border-color: #555;
 }
 
 .dropdown-extended .header, .dropdown-extended .footer {
     color: #FFF;
     border-color: #444;
-    background: #4d606d;
+    background: #555;
 }
 
 .dropdown-extended .header a, .dropdown-extended .footer a {
@@ -432,7 +432,6 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 }
 
 .dropdown-extended ul li.bg2 {
-    background: #333 linear-gradient(to bottom, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
     background: #e3e7e9;
 }
 
@@ -515,10 +514,6 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 .forum-blocks dl {
     background: #E5E4E3;
-}
-
-.forum-blocks dl .list-inner {
-    color: #877B69;
 }
 
 .forum-blocks dl .list-inner {
@@ -680,10 +675,6 @@ li.header dt, li.header dd {
     color: #FFF;
 }
 
-.post:target .content {
-    color: #DDD;
-}
-
 .postprofile,
 .postbody,
 .content,
@@ -704,11 +695,11 @@ blockquote {
 
 
 .post.bg1 > .inner {
-    background: #313131 linear-gradient(to bottom, rgba(23, 23, 23, 1) 0, rgba(49, 49, 49, 0) 82px) linear-gradient(to top, rgba(26, 26, 26, 1) 0, rgba(49, 49, 49, 0) 46px);
+    background: linear-gradient(to bottom, #EBEAE9 0%, #F2F3F3 100%);
 }
 
 .post.bg2 > .inner {
-    background: #1B1B1B linear-gradient(to bottom, rgba(14, 14, 14, 1) 0, rgba(27, 27, 27, 0) 82px) linear-gradient(to top, rgba(14, 14, 14, 1) 0, rgba(27, 27, 27, 0) 38px);
+    background: linear-gradient(to bottom, #E5E4E3 0%, #EDEDED 100%);
 }
 
 .post.reported {
@@ -757,11 +748,6 @@ blockquote {
 }
 
 .has-profile .postbody {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%) no-repeat;
-
-}
-
-.has-profile .postbody {
     background: none;
 }
 
@@ -779,51 +765,24 @@ blockquote {
 /* Quote block */
 
 blockquote {
-    background: rgba(10, 10, 10, 0.2) linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
-    border-color: #575757;
-    color: #CCCCCC;
-    padding: 6px 10px 10px 10px;
-    position: relative;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
-}
-
-blockquote {
     background: rgba(67, 67, 67, 0.12);
     border: none;
     border-radius: 5px;
+    color: #555;
+    padding: 10px 20px 10px 20px;
+    position: relative;
     box-shadow: none;
 }
 
 blockquote:before, blockquote:after {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2em;
-    position: absolute;
-    opacity: 0.3;
-}
-
-blockquote:before {
-    content: "\f10d";
-    left: 3px;
-    top: 2px;
-}
-
-blockquote:after {
-    content: "\f10e";
-    right: 3px;
-    bottom: 2px;
-}
-
-.signature, .notice {
-    border-top-color: #555;
-    padding: 5px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    content: none;
 }
 
 .signature, .notice {
     border-top-color: rgba(200, 200, 200, 0.6);
+    padding: 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .signature {
@@ -882,13 +841,9 @@ code.inline {
 /* Attachments
 ----------------------------------------*/
 .attachbox {
-    background-color: rgba(10, 10, 10, 0.3);
+    background: rgba(67, 67, 67, 0.12);
     border-color: #7C7C7C;
     margin: 10px;
-}
-
-.attachbox {
-    background: rgba(67, 67, 67, 0.12);
 }
 
 .attachbox dd {
@@ -917,15 +872,7 @@ code.inline {
 
 
 dl.file dd {
-    color: #999;
-}
-
-dl.file dd {
     color: #858084;
-}
-
-dl.details dt {
-    color: #DDD;
 }
 
 dl.details dt {
@@ -933,30 +880,11 @@ dl.details dt {
 }
 
 dl.details dd {
-    color: #AAA;
-}
-
-dl.details dd {
     color: inherit;
 }
 
 dl.faq dt {
-    color: #FFF;
-}
-
-dl.faq dt {
     color: #172040;
-}
-
-dl.thumbnail img,
-.content a > img.postimage {
-    background-color: rgba(0, 0, 0, 0.4);
-    /*border: 1px solid #372511 !important;*/
-    border: 1px solid #666 !important; /* !important for lightbox script */
-    border-radius: 5px !important; /* !important for lightbox script */
-    box-shadow: 0 0 6px #000000;
-    padding: 0;
-    transition: border 0.25s ease-out 0s;
 }
 
 dl.thumbnail img,
@@ -976,11 +904,6 @@ dl.thumbnail dt a:hover {
 dl.thumbnail dt a:hover,
 .content a > img.postimage:hover {
     background: none;
-}
-
-dl.thumbnail dt a:hover img,
-.content a > img.postimage:hover {
-    border: 1px solid #CD9000 !important; /* !important for lightbox script */
 }
 
 dl.thumbnail dt a:hover img,
@@ -1065,10 +988,6 @@ fieldset.polls dl.voted {
 .online .postprofile dt a:not(.avatar):after {
     color: #5CFF00;
     text-shadow: #5DF644;
-}
-
-.postprofile strong {
-    color: #DDD;
 }
 
 /* Gaming assets (pbWow extension)
@@ -1221,13 +1140,6 @@ Colours and backgrounds for cp.css
 /* Mini tabbed menu used in MCP
 ----------------------------------------*/
 #minitabs .tab > a {
-    background: #1a1a1a;
-    background: rgba(40, 40, 40, 0.7) linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 100%);
-    border: #222;
-
-}
-
-#minitabs .tab > a {
     background: #ECEBEA;
     background: linear-gradient(#FCFBFA, #ECEBEA);
     border-color: #FCFBFA;
@@ -1314,28 +1226,14 @@ dl.mini dt {
 
 /* PM Message history */
 .current {
-    color: #FFF;
-}
-/* PM Message history */
-.current {
     color: #000;
 }
 
 /* Avatar gallery */
 
 #gallery label {
-    background-color: #161616;
-    border: #444;
-}
-
-#gallery label {
     background-color: #ECEBEA;
     border-color: #CAC9C8;
-}
-
-#gallery label:hover {
-    background-color: #040D1A;
-    border-color: #00C0FF;
 }
 
 #gallery label:hover {
@@ -1381,13 +1279,6 @@ select {
 ---------------------------------------- */
 
 
-
-/* Search box (header)
---------------------------------------------- */
-
-.search-box .inputbox {
-    border-color: #5d5d5d;
-}
 
 option.disabled-option { color: #888; }
 
@@ -1514,10 +1405,6 @@ input.disabled {
 
 .search-header .inputbox {
     border: #7F7F7F;
-}
-
-.search-header .inputbox:focus {
-    border: 1px solid #11A3EA;
 }
 
 .search-header .inputbox:focus {
