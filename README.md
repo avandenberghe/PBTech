@@ -7,7 +7,7 @@ This style was inspired by the Battlenet forums 2015. example
 http://web.archive.org/web/20141207163104/http://us.battle.net/en/forum/topic/10423582376
 
 #### Requirements
-- phpBB 3.3.15 or higher
+- phpBB 3.3.16 or higher
 - prosilver
 
 #### Customizing
@@ -18,6 +18,13 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
+3.0.21 (30-04-2026)
+- aligned with phpBB 3.3.16 prosilver
+- ported null-safety checks for `U_NEWEST_POST`, `U_VIEW_TOPIC`, `U_LAST_POST` in search_results.html and viewforum_body.html (avoids broken anchors when URLs are empty)
+- fixed watch-forum toggle icon: `data-toggle-class` now flips to the opposite icon on click (was unchanged in 3.0.20)
+- inherits prosilver `ucp_pm_viewmessage_message_content_before` event and viewtopic_topic_tools watch-icon fix automatically (pbtech does not override those templates)
+- inherits prosilver `ul.topiclist dfn` accessibility cleanup automatically (pbtech does not override the rule)
+
 3.0.20 (30-04-2026)
 - fixed Customisation Database validation blockers
 - fixed empty mark-forums and view-unread links: added inline FontAwesome icons and sr-only labels
