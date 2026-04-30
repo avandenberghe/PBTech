@@ -220,6 +220,16 @@ i, em {
     padding: 0 3px;
     position: relative;
     text-decoration: none;
+    overflow: visible;
+}
+
+#body-header .crumb a > [itemprop="name"] {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
 }
 
 #body-header .crumb a:before {
@@ -644,15 +654,6 @@ table.table1 tbody .big-column td {
     width: auto;
 }
 
-.pagination li.page-jump a:after, .pagination li.next a:after, .pagination li.previous a:after {
-    font-family: FontAwesome;
-    font-size: 10px;
-    font-weight: normal;
-    padding: 0;
-    line-height: normal;
-    vertical-align: middle;
-}
-
 .pagination li.active span {
     display: inline-block;
     font-size: 0.9em;
@@ -663,22 +664,6 @@ table.table1 tbody .big-column td {
     white-space: nowrap;
     vertical-align: middle;
     border: 1px solid transparent;
-}
-
-
-.pagination li.page-jump a:after {
-    content: '\f124';
-    font-size: 12px;
-}
-
-.pagination li.next a:after {
-    content: '\f054';
-    padding-left: 1px;
-}
-
-.pagination li.previous a:after {
-    content: '\f053';
-    padding-right: 1px;
 }
 
 

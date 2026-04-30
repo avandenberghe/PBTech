@@ -1250,11 +1250,10 @@ Colours and backgrounds for forms.css
 /* General form styles
 ----------------------------------------*/
 select {
-    background: #040d1a url("./images/icons/select.png") no-repeat 100% center;
-    background-color: #FFF;
-    background-image: url("./images/icons/select.png");
+    background: #fff url("./images/icons/select.png") no-repeat 100% center;
     border-color: #b5b3b2;
     color: #5a5a5a;
+    padding-inline-end: 16px;
 }
 
 

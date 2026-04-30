@@ -44,7 +44,7 @@
 		</li>
 		{% EVENT overall_header_breadcrumbs_after %}
 		{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
-		<li class="responsive-search rightside small-icon icon-search" style="display: none;">
+		<li class="responsive-search rightside" style="display: none;">
 			<a href="{{ U_SEARCH }}" title="{{ lang('SEARCH_ADV_EXPLAIN') }}" role="menuitem">
 				<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
 			</a>
@@ -52,36 +52,28 @@
 		{% endif %}
 
 		{% if not S_IS_BOT %}
-			{% if U_SITE_HOME %}
-				{% if S_USER_LOGGED_IN and U_MARK_FORUMS %}
-				<li class="rightside small-icon icon-mark-read">
-					<a href="{{ U_MARK_FORUMS }}" accesskey="m" data-ajax="mark_forums_read" title="{{ lang('MARK_FORUMS_READ') }}"></a>
-				</li>
-				{% endif %}
-			{% elseif S_INDEX %}
-				{% if S_USER_LOGGED_IN and U_MARK_FORUMS %}<li class="rightside small-icon icon-mark-read">
-					<a href="{{ U_MARK_FORUMS }}" accesskey="m" data-ajax="mark_forums_read" title="{{ lang('MARK_FORUMS_READ') }}">
+			{% if U_MARK_FORUMS and (S_INDEX or (S_VIEWFORUM and S_HAS_SUBFORUM)) %}
+				{% set MARK_LABEL = (S_VIEWFORUM and S_HAS_SUBFORUM) ? lang('MARK_SUBFORUMS_READ') : lang('MARK_FORUMS_READ') %}
+				<li class="rightside">
+					<a href="{{ U_MARK_FORUMS }}" accesskey="m" data-ajax="mark_forums_read" title="{{ MARK_LABEL }}">
+						<i class="icon fa-check-square-o fa-fw" aria-hidden="true"></i><span class="sr-only">{{ MARK_LABEL }}</span>
 					</a>
 				</li>
-				{% endif %}
-			{% elseif S_VIEWFORUM %}
-				{% if S_HAS_SUBFORUM and U_MARK_FORUMS %}<li class="rightside small-icon icon-mark-read">
-					<a href="{{ U_MARK_FORUMS }}" data-ajax="mark_forums_read" title="{{ lang('MARK_SUBFORUMS_READ') }}">
-					</a>
-				</li>
-				{% endif %}
-			{% elseif S_VIEWTOPIC %}
-				{% if U_VIEW_UNREAD_POST %}
-				<li class="rightside small-icon icon-view">
+			{% endif %}
+
+			{% if S_VIEWTOPIC and U_VIEW_UNREAD_POST %}
+				<li class="rightside">
 					<a href="{{ U_VIEW_UNREAD_POST }}" title="{{ lang('VIEW_UNREAD_POST') }}">
+						<i class="icon fa-eye fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('VIEW_UNREAD_POST') }}</span>
 					</a>
 				</li>
-				{% endif %}
-			{% elseif SEARCH_MATCHES and not S_IN_SEARCH %}
+			{% endif %}
+
+			{% if SEARCH_MATCHES and not S_IN_SEARCH %}
 				{% if SEARCH_TOPIC %}
 					<li class="rightside">
 						<a class="arrow-{{ S_CONTENT_FLOW_BEGIN }}" href="{{ U_SEARCH_TOPIC }}">
-						{{ lang('RETURN_TO_TOPIC') }}
+							{{ lang('RETURN_TO_TOPIC') }}
 						</a>
 					</li>
 				{% else %}

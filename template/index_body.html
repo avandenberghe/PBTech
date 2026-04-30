@@ -22,7 +22,7 @@
 				{% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
 			{% endif %}
 			{% EVENT index_body_block_online_append %}
-			{% if U_VIEWONLINE %}<a class="online-pagelink" href="{{ U_VIEWONLINE }}" title="{{ lang('WHO_IS_ONLINE') }}">{{ LAST_POST_IMG }}</a>{% endif %}
+			{% if U_VIEWONLINE %}<a class="online-pagelink" href="{{ U_VIEWONLINE }}" title="{{ lang('WHO_IS_ONLINE') }}"><i class="icon fa-arrow-right fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('WHO_IS_ONLINE') }}</span></a>{% endif %}
 		</p>
 	</div>
 {% endif %}
