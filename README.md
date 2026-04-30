@@ -18,6 +18,17 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
+3.0.20 (30-04-2026)
+- fixed Customisation Database validation blockers
+- fixed empty mark-forums and view-unread links: added inline FontAwesome icons and sr-only labels
+- fixed mislabelled Who-is-Online link (LAST_POST_IMG → arrow icon + sr-only label)
+- fixed double search icon at responsive widths (removed redundant `icon-search` class on responsive-search li)
+- fixed double pagination chevrons (removed redundant li.next/previous/page-jump :after pseudo-rules)
+- fixed breadcrumb tooltips clipped on hover (truncation moved onto inner [itemprop="name"] span)
+- removed duplicate BootstrapCDN @font-face declaration (T_FONT_AWESOME_LINK already loads FA locally)
+- simplified mark-forums template branching (dropped redundant U_SITE_HOME / S_USER_LOGGED_IN guards)
+- cleaned up colours.css select rule (dead declarations + padding-inline-end)
+
 3.0.19 (04-04-2026)
 - added missing theme/print.css for print view
 - added styled CSS tooltips for breadcrumb links (replaces native browser tooltips)
